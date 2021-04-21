@@ -28,6 +28,7 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1f;
         isGamePaused = false;
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void PauseGame()
@@ -36,6 +37,7 @@ public class Pause : MonoBehaviour
         Time.timeScale = 0f;
         isGamePaused = true;
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void LoadMenu()
