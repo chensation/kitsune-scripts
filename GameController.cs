@@ -14,6 +14,15 @@ public class GameController : MonoBehaviour {
     private void Start()
     {
         Cursor.visible = !hideCursor;
+        if (hideCursor)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 
     public void TeleportToTemple()
